@@ -4,6 +4,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
 const authRouter = require("./routes/AuthRouter");
+const recipe = require("./routes/RecipeRouter");
 
 const app = express();
 
@@ -22,6 +23,7 @@ connectDB();
 
 //auth routes
 app.use("/api/auth/", authRouter);
+app.use("/api/recipe/", recipe);
 
 app.get("/", (req, res) => res.send("API is running"));
 
