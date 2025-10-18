@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Joi = require("joi");
 const User = require("../model/user");
-
+const { httpLogger, logger } = require("../middleware/logger");
 //validation schema
 const validation = Joi.object({
   name: Joi.string().required(),
@@ -24,9 +24,12 @@ const register = async (req, res) => {
       return res.status(400).json({ message: "All fields are required." });
     }
 
+    logger.info(`Registration attempt started for email: ${email}`);
+
     //here we are checking existing user
     const checkExistingUser = await User.findOne({ email });
     if (checkExistingUser) {
+      logger.warn(`Registration failed: Email already registered (${email})`);
       return res.status(409).json({ message: "Email already Registered." });
     }
 
@@ -40,6 +43,7 @@ const register = async (req, res) => {
       password: hashedPassword,
     });
     await newUser.save();
+    logger.info(`New user registered successfully: ${email}`);
 
     //here we are creating jwt token for the new user
     const token = jwt.sign(
@@ -57,6 +61,7 @@ const register = async (req, res) => {
       sameSite: "lax",
       maxAge: 24 * 60 * 60 * 1000,
     });
+    logger.info(`JWT token generated for: ${email} is ${token}`);
 
     res.status(201).json({
       message: "User created successfully",
@@ -68,6 +73,7 @@ const register = async (req, res) => {
       },
     });
   } catch (error) {
+    logger.error(`Error during registration: ${error.message}`);
     res
       .status(400)
       .json({ message: "Server error during registration process." });

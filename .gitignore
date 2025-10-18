@@ -1,2 +1,6 @@
 server/node_modules/
 .env
+server/logs/backend.log
+.DS_Store
+client/node_modules/
+client/build/

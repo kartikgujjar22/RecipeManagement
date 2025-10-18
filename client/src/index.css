@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Recipe Website Color Palette */
+    --color-olive: 66 20% 21%;        /* #3E3F29 - Dark olive */
+    --color-sage: 162 8% 52%;          /* #7D8D86 - Sage green */
+    --color-tan: 30 28% 65%;           /* #BCA88D - Warm tan */
+    --color-cream: 50 29% 93%;         /* #F1F0E4 - Soft cream */
+    
+    /* Semantic Design Tokens */
+    --background: 50 29% 93%;          /* Cream background */
+    --foreground: 66 20% 21%;          /* Dark olive text */
+
+    --card: 0 0% 100%;                 /* White cards */
+    --card-foreground: 66 20% 21%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 66 20% 21%;
+
+    --primary: 66 20% 21%;             /* Dark olive */
+    --primary-foreground: 50 29% 93%;  /* Cream text on olive */
+
+    --secondary: 162 8% 52%;           /* Sage */
+    --secondary-foreground: 0 0% 100%; /* White text on sage */
+
+    --muted: 30 28% 85%;               /* Light tan */
+    --muted-foreground: 66 20% 35%;
+
+    --accent: 30 28% 65%;              /* Tan accent */
+    --accent-foreground: 66 20% 21%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 90%;
+    --ring: 66 20% 21%;
+
+    --radius: 0.75rem;
+
+    /* Additional Design Tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 4px 6px -1px hsl(var(--color-olive) / 0.1), 0 2px 4px -1px hsl(var(--color-olive) / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(var(--color-olive) / 0.1), 0 4px 6px -2px hsl(var(--color-olive) / 0.05);
+    --shadow-large: 0 20px 25px -5px hsl(var(--color-olive) / 0.1), 0 10px 10px -5px hsl(var(--color-olive) / 0.04);
+  }
+
+  .dark {
+    --background: 66 20% 21%;
+    --foreground: 50 29% 93%;
+
+    --card: 66 20% 16%;
+    --card-foreground: 50 29% 93%;
+
+    --popover: 66 20% 16%;
+    --popover-foreground: 50 29% 93%;
+
+    --primary: 50 29% 93%;
+    --primary-foreground: 66 20% 21%;
+
+    --secondary: 162 8% 35%;
+    --secondary-foreground: 50 29% 93%;
+
+    --muted: 66 20% 25%;
+    --muted-foreground: 30 28% 75%;
+
+    --accent: 30 28% 45%;
+    --accent-foreground: 50 29% 93%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 50 29% 93%;
+
+    --border: 66 20% 30%;
+    --input: 66 20% 25%;
+    --ring: 50 29% 93%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

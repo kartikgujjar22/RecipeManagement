@@ -5,15 +5,19 @@ const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
 const authRouter = require("./routes/AuthRouter");
 const recipe = require("./routes/RecipeRouter");
+const { httpLogger, logger } = require("./middleware/logger");
 
 const app = express();
 
 // Middleware
 app.use(express.json());
+
+app.use(httpLogger);
+
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // your frontend URL
+    origin: "http://localhost:8080",
     credentials: true,
   })
 );
