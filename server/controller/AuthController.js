@@ -90,13 +90,17 @@ const login = async (req, res) => {
         .json({ message: "Email and password are required" });
     }
 
+    logger.info(`Login attempt started for email: ${email}`);
+
     const user = await User.findOne({ email });
     if (!user) {
+      logger.warn(`Login failed: User not found for email (${email})`);
       return res.status(404).json({ message: "User not found" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
+      logger.warn(`Login failed: Incorrect password for email (${email})`);
       return res.status(401).json({ message: "enter correct password" });
     }
 
@@ -115,6 +119,8 @@ const login = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
+    logger.info(`User logged in successfully: ${email}`);
+
     res.status(200).json({
       message: "Login successfull",
       user: {
@@ -128,4 +134,23 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login };
+const logout = (req, res) => {
+  try {
+    // 1. Clear the 'token' cookie
+    res.cookie("token", "", {
+      httpOnly: true,
+      secure: req.secure || false, // Use req.secure if deployed with HTTPS, otherwise false (or check environment)
+      sameSite: "lax",
+      expires: new Date(0), // Set expiration to a time in the past to delete the cookie immediately
+    });
+
+    logger.info("User successfully logged out and cookie cleared.");
+
+    res.status(200).json({ message: "Logout successful" });
+  } catch (error) {
+    logger.error(`Error during logout: ${error.message}`);
+    res.status(500).json({ message: "Server error during logout process." });
+  }
+};
+
+module.exports = { register, login, logout };

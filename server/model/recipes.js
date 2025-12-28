@@ -19,17 +19,42 @@ const recipeSchema = new mongoose.Schema(
         required: true,
       },
     ],
+
+    // 🚀 NEW: Instructions field
+    instructions: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
+
+    // 🚀 NEW: Cooking Time field
+    cookingTime: {
+      type: Number, // Storing as a number (minutes)
+      required: true,
+      min: 1,
+    },
+
+    // 🚀 NEW: Servings field
+    servings: {
+      type: Number, // Storing as a number
+      required: true,
+      min: 1,
+    },
+
     images: [
       {
         type: String,
         required: true,
       },
     ],
+
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
+
     difficulty: {
       type: String,
       enum: ["Easy", "Medium", "Hard"],
@@ -40,17 +65,10 @@ const recipeSchema = new mongoose.Schema(
       type: String,
       default: "General",
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-    },
 
-    updatedAt: {
-      type: Date,
-      default: Date.now,
-    },
+    // Removing 'createdAt' and 'updatedAt' manual fields since { timestamps: true } handles them
   },
-  { timestamps: true }
+  { timestamps: true } // This option handles createdAt and updatedAt automatically
 );
 
 module.exports = mongoose.model("Recipe", recipeSchema);
