@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Menu, X, Plus, LogOut, User, Home, BookOpen, ChefHat } from "lucide-react";
+// Added LogIn icon for the unauthenticated state
+import { Search, Menu, X, Plus, LogOut, User, Home, BookOpen, ChefHat, LogIn } from "lucide-react"; 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -23,6 +24,9 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
       setSearchQuery("");
     }
   };
+
+  // Helper function to close mobile menu on navigation/action
+  const handleNavClick = () => setMobileMenuOpen(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-card border-b border-border shadow-sm backdrop-blur-sm bg-card/95">
@@ -55,6 +59,12 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
                     Add Recipe
                   </Button>
                 </Link>
+                <Link to="/update-recipe/1">
+                  <Button variant="default" size="sm" className="gap-2">
+                    {/* <Plus className="h-4 w-4" /> */}
+                    Update Recipe
+                  </Button>
+                </Link>
               </>
             )}
           </div>
@@ -71,7 +81,7 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
               <Search className="h-5 w-5" />
             </Button>
 
-            {/* Desktop Auth Buttons */}
+            {/* Desktop Auth Button (Login/Logout) 🚀 UPDATED */}
             <div className="hidden md:flex items-center gap-2">
               {isAuthenticated ? (
                 <Button
@@ -84,14 +94,12 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
                   Logout
                 </Button>
               ) : (
-                <>
-                  <Link to="/login">
-                    <Button variant="ghost" size="sm">Login</Button>
-                  </Link>
-                  <Link to="/signup">
-                    <Button variant="default" size="sm">Sign Up</Button>
-                  </Link>
-                </>
+                <Link to="/login">
+                  <Button variant="default" size="sm" className="gap-2">
+                    <LogIn className="h-4 w-4" /> {/* Use LogIn icon */}
+                    Login
+                  </Button>
+                </Link>
               )}
             </div>
 
@@ -126,50 +134,34 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
           </div>
         )}
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu 🚀 UPDATED */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col gap-3">
-              <Link
-                to="/"
-                className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <Home className="h-5 w-5" />
-                <span>Home</span>
+              {/* Static Links */}
+              <Link to="/" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors" onClick={handleNavClick}>
+                <Home className="h-5 w-5" /><span>Home</span>
               </Link>
-              <Link
-                to="/recipes"
-                className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <BookOpen className="h-5 w-5" />
-                <span>All Recipes</span>
+              <Link to="/recipes" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors" onClick={handleNavClick}>
+                <BookOpen className="h-5 w-5" /><span>All Recipes</span>
               </Link>
+              
               {isAuthenticated ? (
                 <>
-                  <Link
-                    to="/my-recipes"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <User className="h-5 w-5" />
-                    <span>My Recipes</span>
+                  {/* Authenticated Links */}
+                  <Link to="/my-recipes" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors" onClick={handleNavClick}>
+                    <User className="h-5 w-5" /><span>My Recipes</span>
                   </Link>
-                  <Link
-                    to="/add-recipe"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Plus className="h-5 w-5" />
-                    <span>Add Recipe</span>
+                  <Link to="/add-recipe" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors" onClick={handleNavClick}>
+                    <Plus className="h-5 w-5" /><span>Add Recipe</span>
                   </Link>
+                  {/* Logout Button in Mobile Menu */}
                   <button
                     onClick={() => {
                       onLogout?.();
-                      setMobileMenuOpen(false);
+                      handleNavClick();
                     }}
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors text-left"
+                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted transition-colors text-left w-full"
                   >
                     <LogOut className="h-5 w-5" />
                     <span>Logout</span>
@@ -177,19 +169,15 @@ const Navbar = ({ isAuthenticated = false, onLogout }: NavbarProps) => {
                 </>
               ) : (
                 <>
-                  <Link
-                    to="/login"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Button variant="ghost" className="w-full justify-start">
+                  {/* Unauthenticated Links: Login as primary button */}
+                  <Link to="/login" onClick={handleNavClick}>
+                    <Button variant="default" className="w-full">
                       Login
                     </Button>
                   </Link>
-                  <Link
-                    to="/signup"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <Button variant="default" className="w-full">
+                  {/* Sign Up as a secondary (ghost) button in mobile */}
+                  <Link to="/signup" onClick={handleNavClick}>
+                    <Button variant="ghost" className="w-full">
                       Sign Up
                     </Button>
                   </Link>

@@ -1,3 +1,5 @@
+// client\src\components\pages\Login.tsx
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChefHat } from "lucide-react";
@@ -6,14 +8,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
+import axios from "axios"; 
+import { useAuth } from "../../context/AuthContext"; 
 
 const Login = () => {
   const navigate = useNavigate();
+  
+  const { setIsAuthenticated } = useAuth();
+  
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -22,18 +31,42 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.email || !formData.password) {
       toast.error("Please fill in all fields");
       return;
     }
 
-    // TODO: Call API to login
-    console.log("Login data:", formData);
-    
-    // Mock successful login
-    toast.success("Login successful!");
-    navigate("/");
+    try {
+     
+      const response = await axios.post(
+        `${VITE_BACKEND_URL}api/auth/login`, 
+        { 
+          email: formData.email, 
+          password: formData.password 
+        }, 
+        { 
+          withCredentials: true, // CRITICAL: Ensures the cookie is set by the browser
+          headers: {
+             "Content-Type": "application/json",
+          }
+        }
+      );
+
+      if (response.status === 200) {
+        // 🚀 THE FIX: Update the global authentication state
+        setIsAuthenticated(true); 
+        
+        toast.success("Logged in successfully!");
+        navigate("/");
+      }
+      
+    } catch (error) {
+      const errorMessage = axios.isAxiosError(error) 
+        ? error.response?.data?.message || "Login failed. Please try again."
+        : "An unexpected error occurred.";
+        
+      return toast.error(errorMessage);
+    }
   };
 
   return (
