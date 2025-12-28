@@ -1,0 +1,183 @@
+[2025-10-18 21:51:15] INFO: OPTIONS /api/auth/register 204 1.626 ms - 0
+[2025-10-18 21:51:15] INFO: Registration attempt started for email: gourav@gmail.com
+[2025-10-18 21:51:16] INFO: New user registered successfully: gourav@gmail.com
+[2025-10-18 21:51:16] INFO: JWT token generated for: gourav@gmail.com is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjNiZTdjM2RiYWExNzEyMjkxZmI5OCIsImVtYWlsIjoiZ291cmF2QGdtYWlsLmNvbSIsImlhdCI6MTc2MDgwNDQ3NiwiZXhwIjoxNzYwODkwODc2fQ.JejfO6Z68iZsQC5VHhGaaJfbuaLW2dqjW5xaLwkudjE
+[2025-10-18 21:51:16] INFO: POST /api/auth/register 201 216.998 ms - 325
+[2025-10-19 12:19:25] INFO: OPTIONS /api/auth/login 204 1.547 ms - 0
+[2025-10-19 12:19:25] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 12:19:25] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 12:19:25] INFO: POST /api/auth/login 200 115.196 ms - 116
+[2025-10-19 12:41:41] INFO: OPTIONS /api/auth/login 204 1.890 ms - 0
+[2025-10-19 12:41:41] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 12:41:41] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 12:41:41] INFO: POST /api/auth/login 200 101.986 ms - 116
+[2025-10-19 12:58:06] INFO: GET /api/auth/status 404 16.459 ms - 154
+[2025-10-19 12:59:39] INFO: GET /api/auth/status 404 1.688 ms - 154
+[2025-10-19 13:00:01] INFO: GET /api/auth/status 404 0.399 ms - 154
+[2025-10-19 13:00:20] INFO: GET /api/auth/status 404 0.340 ms - 154
+[2025-10-19 13:00:32] INFO: OPTIONS /api/auth/login 204 1.735 ms - 0
+[2025-10-19 13:00:32] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 13:00:32] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 13:00:32] INFO: POST /api/auth/login 200 128.897 ms - 116
+[2025-10-19 13:07:07] INFO: GET /api/auth/status 404 2.028 ms - 154
+[2025-10-19 13:24:13] INFO: GET /api/auth/status 404 20.217 ms - 154
+[2025-10-19 13:24:29] INFO: OPTIONS /api/auth/login 204 0.645 ms - 0
+[2025-10-19 13:24:29] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 13:24:29] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 13:24:29] INFO: POST /api/auth/login 200 130.845 ms - 116
+[2025-10-19 13:30:07] INFO: GET /api/auth/status 404 9.848 ms - 154
+[2025-10-19 13:31:15] INFO: OPTIONS /api/auth/login 204 0.842 ms - 0
+[2025-10-19 13:31:15] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 13:31:15] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 13:31:15] INFO: POST /api/auth/login 200 124.717 ms - 116
+[2025-10-19 13:31:19] INFO: GET /api/recipes/1 404 0.547 ms - 152
+[2025-10-19 13:31:54] INFO: GET /api/recipes/1 404 1.516 ms - 152
+[2025-10-19 13:32:18] INFO: OPTIONS /api/auth/logout 204 0.160 ms - 0
+[2025-10-19 13:32:18] INFO: User successfully logged out and cookie cleared.
+[2025-10-19 13:32:18] INFO: POST /api/auth/logout 200 4.027 ms - 31
+[2025-10-19 13:32:34] INFO: OPTIONS /api/auth/login 204 0.144 ms - 0
+[2025-10-19 13:32:34] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 13:32:34] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 13:32:34] INFO: POST /api/auth/login 200 61.579 ms - 116
+[2025-10-19 13:36:01] INFO: GET /api/auth/status 404 10.810 ms - 154
+[2025-10-19 13:37:14] INFO: OPTIONS /api/auth/login 204 0.821 ms - 0
+[2025-10-19 13:37:14] INFO: Login attempt started for email: gourav@gmail.com
+[2025-10-19 13:37:14] INFO: User logged in successfully: gourav@gmail.com
+[2025-10-19 13:37:14] INFO: POST /api/auth/login 200 107.944 ms - 116
+[2025-10-19 13:37:22] INFO: GET /api/recipes/1 404 1.250 ms - 152
+[2025-10-19 13:37:26] INFO: GET /api/recipes/1 404 0.690 ms - 152
+[2025-10-20 13:34:12] INFO: GET /api/auth/status 404 6.318 ms - 154
+[2025-10-20 13:34:29] INFO: OPTIONS /api/auth/register 204 0.587 ms - 0
+[2025-10-20 13:34:29] INFO: Registration attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 13:34:29] INFO: New user registered successfully: kartikchhoker108@gmail.com
+[2025-10-20 13:34:29] INFO: JWT token generated for: kartikchhoker108@gmail.com is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjVlZDBkZTlmYjcyM2U4ZDJlNmRhMCIsImVtYWlsIjoia2FydGlrY2hob2tlcjEwOEBnbWFpbC5jb20iLCJpYXQiOjE3NjA5NDc0NjksImV4cCI6MTc2MTAzMzg2OX0.Hrq111TzZYXrdxaNNAIxom-UNRpYygl_MHzWxQHIH3M
+[2025-10-20 13:34:29] INFO: POST /api/auth/register 201 252.243 ms - 348
+[2025-10-20 13:34:41] INFO: OPTIONS /api/auth/login 204 0.208 ms - 0
+[2025-10-20 13:34:41] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 13:34:41] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 13:34:41] INFO: POST /api/auth/login 200 65.668 ms - 132
+[2025-10-20 13:40:29] INFO: GET /api/auth/status 404 14.836 ms - 154
+[2025-10-20 13:40:40] INFO: GET /api/auth/status 404 3.977 ms - 154
+[2025-10-20 13:41:17] INFO: OPTIONS /api/auth/login 204 0.643 ms - 0
+[2025-10-20 13:41:17] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 13:41:17] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 13:41:17] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 13:41:17] INFO: POST /api/auth/login 200 160.164 ms - 132
+[2025-10-20 13:41:17] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 13:41:17] INFO: POST /api/auth/login 200 126.310 ms - 132
+[2025-10-20 13:46:49] INFO: GET /api/auth/status 404 20.479 ms - 154
+[2025-10-20 13:46:57] INFO: OPTIONS /api/auth/login 204 0.488 ms - 0
+[2025-10-20 13:46:57] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 13:46:57] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 13:46:57] INFO: POST /api/auth/login 200 131.801 ms - 132
+[2025-10-20 13:52:32] INFO: POST /api/recipes/add 404 72.625 ms - 155
+[2025-10-20 14:05:58] INFO: POST /api/recipes/add 404 36.140 ms - 155
+[2025-10-20 14:06:08] INFO: GET /api/auth/status 404 1.107 ms - 154
+[2025-10-20 14:06:18] INFO: OPTIONS /api/auth/login 204 0.419 ms - 0
+[2025-10-20 14:06:18] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 14:06:18] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 14:06:18] INFO: POST /api/auth/login 200 156.278 ms - 132
+[2025-10-20 14:07:57] INFO: POST /api/recipes/add 404 57.983 ms - 155
+[2025-10-20 16:36:54] INFO: GET /api/auth/status 404 51.343 ms - 154
+[2025-10-20 16:51:08] INFO: GET /api/auth/status 404 12.331 ms - 154
+[2025-10-20 16:51:18] INFO: OPTIONS /api/auth/login 204 0.923 ms - 0
+[2025-10-20 16:51:18] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 16:51:18] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 16:51:18] INFO: POST /api/auth/login 200 141.463 ms - 132
+[2025-10-20 16:51:24] INFO: GET /api/auth/status 404 0.930 ms - 154
+[2025-10-20 17:44:22] INFO: GET /api/auth/status 404 8.499 ms - 154
+[2025-10-20 17:44:28] INFO: OPTIONS /api/auth/login 204 0.254 ms - 0
+[2025-10-20 17:44:28] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 17:44:28] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 17:44:28] INFO: POST /api/auth/login 200 108.843 ms - 132
+[2025-10-20 17:48:28] INFO: POST /api/recipes/add 404 69.719 ms - 155
+[2025-10-20 17:55:20] INFO: POST /api/recipes/add 404 40.308 ms - 155
+[2025-10-20 17:57:01] INFO: GET /api/recipes/add 404 2.801 ms - 154
+[2025-10-20 17:59:10] INFO: POST /api/recipe/add 500 171.386 ms - 1152
+[2025-10-20 17:59:15] INFO: POST /api/recipe/add 500 26.251 ms - 1152
+[2025-10-20 18:00:36] INFO: GET /api/auth/status 404 0.772 ms - 154
+[2025-10-20 18:00:39] INFO: GET /api/auth/status 404 1.981 ms - 154
+[2025-10-20 18:00:48] INFO: OPTIONS /api/auth/login 204 0.510 ms - 0
+[2025-10-20 18:00:48] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 18:00:48] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 18:00:48] INFO: POST /api/auth/login 200 153.064 ms - 132
+[2025-10-20 18:01:26] INFO: POST /api/recipe/add 500 59.676 ms - 1152
+[2025-10-20 18:02:53] INFO: GET /api/recipe/add 404 0.415 ms - 153
+[2025-10-20 18:11:46] INFO: POST /api/recipe/add 400 76.276 ms - 74
+[2025-10-20 18:12:02] INFO: POST /api/recipe/add 400 35.369 ms - 74
+[2025-10-20 18:12:36] INFO: POST /api/recipe/add 400 37.878 ms - 45
+[2025-10-20 18:14:32] INFO: Adding recipe with data: {"title":"Pizza","description":"breif desc","difficulty":"Easy","cuisineType":"Italian","cookingTime":"30","servings":"4","ingredients":"dsdsds,dsdsdsds,dsdsdsd,dsdsdsdsds","instructions":"dsdddddddddd\r\nddddddddddddddddddddd\r\nddddddddddddddddddddd"}
+[2025-10-20 18:14:32] INFO: Received recipe data: {"title":"Pizza","description":"breif desc","difficulty":"Easy","cuisineType":"Italian","cookingTime":"30","servings":"4","ingredients":"dsdsds,dsdsdsds,dsdsdsd,dsdsdsdsds","instructions":"dsdddddddddd\r\nddddddddddddddddddddd\r\nddddddddddddddddddddd"}
+[2025-10-20 18:14:32] INFO: Uploaded image paths: 1760964272881-249471022.jpg
+[2025-10-20 18:14:32] INFO: Author ID from token: 68f5ed0de9fb723e8d2e6da0
+[2025-10-20 18:14:32] INFO: New Recipe object: {"title":"Pizza","description":"breif desc","ingredients":["dsdsds","dsdsdsds","dsdsdsd","dsdsdsdsds"],"instructions":["dsdddddddddd","ddddddddddddddddddddd","ddddddddddddddddddddd"],"cookingTime":30,"servings":4,"images":["1760964272881-249471022.jpg"],"author":"68f5ed0de9fb723e8d2e6da0","difficulty":"Easy","cuisineType":"Italian","_id":"68f62eb0b07c26dcb76753ba"}
+[2025-10-20 18:14:32] INFO: POST /api/recipe/add 200 120.024 ms - 502
+[2025-10-20 21:14:30] INFO: GET /api/auth/status 404 58.165 ms - 154
+[2025-10-20 21:14:48] INFO: OPTIONS /api/auth/login 204 3.718 ms - 0
+[2025-10-20 21:14:48] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 21:14:48] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 21:14:48] INFO: POST /api/auth/login 200 179.338 ms - 132
+[2025-10-20 21:41:29] INFO: GET /api/auth/status 404 26.839 ms - 154
+[2025-10-20 21:48:24] INFO: GET /api/auth/status 404 5.346 ms - 154
+[2025-10-20 21:48:34] INFO: OPTIONS /api/auth/login 204 0.715 ms - 0
+[2025-10-20 21:48:34] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-20 21:48:34] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-20 21:48:34] INFO: POST /api/auth/login 200 135.547 ms - 132
+[2025-10-20 21:54:01] INFO: Fetched recipes. Page: 1, Limit: 10, Count: 2
+[2025-10-20 21:54:01] INFO: GET /api/recipe/all 200 101.653 ms - 1036
+[2025-10-20 22:02:17] INFO: GET /api/recipe? 404 87.761 ms - 149
+[2025-10-20 22:02:20] INFO: GET /api/recipe? 404 0.559 ms - 149
+[2025-10-20 22:02:20] INFO: GET /api/auth/status 404 4.139 ms - 154
+[2025-10-20 22:03:22] INFO: GET /api/auth/status 404 7.116 ms - 154
+[2025-10-20 22:03:27] INFO: GET /api/auth/status 404 2.714 ms - 154
+[2025-10-20 22:04:19] INFO: GET /api/auth/status 404 11.197 ms - 154
+[2025-10-21 07:24:05] INFO: GET //api/recipe?{queryString} 404 2.625 ms - 150
+[2025-10-21 07:24:05] INFO: GET /api/auth/status 404 0.869 ms - 154
+[2025-10-21 07:24:10] INFO: GET //api/recipe?{queryString} 404 0.465 ms - 150
+[2025-10-21 07:24:10] INFO: GET /api/auth/status 404 0.434 ms - 154
+[2025-10-21 07:24:14] INFO: GET /api/auth/status 404 0.689 ms - 154
+[2025-10-21 07:24:16] INFO: GET //api/recipe?{queryString} 404 0.476 ms - 150
+[2025-10-21 07:24:28] INFO: OPTIONS /api/auth/login 204 0.244 ms - 0
+[2025-10-21 07:24:28] INFO: Login attempt started for email: kartikchhoker108@gmail.com
+[2025-10-21 07:24:28] INFO: User logged in successfully: kartikchhoker108@gmail.com
+[2025-10-21 07:24:28] INFO: POST /api/auth/login 200 136.589 ms - 132
+[2025-10-21 07:24:39] INFO: GET //api/recipe?{queryString} 404 0.807 ms - 150
+[2025-10-21 07:26:38] INFO: GET /api/recipe?{queryString} 404 0.923 ms - 149
+[2025-10-21 07:26:38] INFO: GET /api/auth/status 404 0.811 ms - 154
+[2025-10-21 07:26:44] INFO: GET /api/recipe?{queryString} 404 0.893 ms - 149
+[2025-10-21 07:26:44] INFO: GET /api/auth/status 404 0.661 ms - 154
+[2025-10-21 07:37:17] INFO: GET /api/recipe?{queryString} 404 1.496 ms - 149
+[2025-10-21 07:37:17] INFO: GET /api/auth/status 404 0.537 ms - 154
+[2025-10-21 07:37:26] INFO: GET /api/recipe?{queryString} 404 0.402 ms - 149
+[2025-10-21 07:37:26] INFO: GET /api/auth/status 404 0.476 ms - 154
+[2025-10-21 07:37:55] INFO: GET /api/recipe?{queryString} 404 0.605 ms - 149
+[2025-10-21 07:37:56] INFO: GET /api/auth/status 404 2.714 ms - 154
+[2025-10-21 07:38:20] INFO: GET /api/recipe?{queryString} 404 0.539 ms - 149
+[2025-10-21 07:38:20] INFO: GET /api/auth/status 404 1.436 ms - 154
+[2025-10-21 07:38:27] INFO: GET /api/recipe?{queryString} 404 0.606 ms - 149
+[2025-10-21 07:38:32] INFO: GET /api/recipe?{queryString} 404 0.708 ms - 149
+[2025-10-21 07:38:35] INFO: GET /api/recipe?{queryString} 404 0.708 ms - 149
+[2025-10-21 07:38:36] INFO: GET /api/recipe?{queryString} 404 2.159 ms - 149
+[2025-10-21 07:38:39] INFO: GET /api/recipe?{queryString} 404 0.696 ms - 149
+[2025-10-21 07:42:49] INFO: GET /api/recipe?page=1&difficulty=Easy 404 0.568 ms - 149
+[2025-10-21 07:42:57] INFO: GET /api/recipe?page=1&difficulty=Easy 404 0.607 ms - 149
+[2025-10-21 07:42:57] INFO: GET /api/auth/status 404 0.620 ms - 154
+[2025-10-21 07:43:09] INFO: GET /api/recipe?page=1 404 0.692 ms - 149
+[2025-10-21 07:43:11] INFO: GET /api/recipe 404 2.934 ms - 149
+[2025-10-21 07:43:44] INFO: GET /api/recipe 404 0.710 ms - 149
+[2025-10-21 07:43:44] INFO: GET /api/auth/status 404 0.606 ms - 154
+[2025-10-21 07:43:46] INFO: GET /api/recipe 404 0.337 ms - 149
+[2025-10-21 07:43:46] INFO: GET /api/auth/status 404 0.675 ms - 154
+[2025-10-21 07:44:17] INFO: GET /api/recipe 404 0.732 ms - 149
+[2025-10-21 07:44:17] INFO: GET /api/auth/status 404 0.719 ms - 154
+[2025-10-21 07:44:22] INFO: GET /api/recipe?page=1&difficulty=Medium 404 0.704 ms - 149
+[2025-10-21 08:31:01] INFO: GET /api/recipe?page=1&difficulty=Medium 404 1.056 ms - 149
+[2025-10-21 08:31:01] INFO: GET /api/auth/status 404 0.550 ms - 154
+[2025-10-21 10:33:18] INFO: GET /api/recipe?page=1&difficulty=Medium 404 0.729 ms - 149
+[2025-10-21 10:33:18] INFO: GET /api/auth/status 404 0.700 ms - 154
+[2025-10-21 13:43:16] INFO: GET /api/recipe?page=1&difficulty=Medium 404 6.718 ms - 149
+[2025-10-21 13:43:16] INFO: GET /api/auth/status 404 1.101 ms - 154
+[2025-10-21 14:22:08] INFO: GET /api/recipe?page=1&difficulty=Medium 404 0.614 ms - 149
+[2025-10-21 14:22:10] INFO: GET /api/auth/status 404 0.935 ms - 154
+[2025-10-21 15:19:54] INFO: GET /api/recipe?page=1&difficulty=Medium 404 3.180 ms - 149
+[2025-10-21 15:19:54] INFO: GET /api/auth/status 404 1.623 ms - 154
